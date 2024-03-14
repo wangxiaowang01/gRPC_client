@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+option go_package="../proto";
+
+service Greeter {
+  // Sends a greeting
+    rpc SayHello (HelloRequest) returns (HelloReply) {} // 定义rpc接口
+  // Sends another greeting  如果还要加就在下面添加 rpc
+    // rpc SayHelloAgain (HelloRequest) returns (HelloReply) {}
+}
+
+// The request message containing the user's name. 定义请求
+message HelloRequest {
+    string name = 1;
+}
+
+// The response message containing the greetings，定义响应
+message HelloReply {
+    string message = 1;
+}
+
+
+
